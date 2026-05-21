@@ -1,0 +1,749 @@
+/* Buyers Page Styles */
+.buyers-container {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Poppins', 'Segoe UI', 'Arial', sans-serif;
+}
+
+/* Hero Slider Section */
+.buyers-hero-wrapper {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.buyers-hero-slider-section {
+  width: 100%;
+  height: 100%;
+}
+
+.buyers-slider-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.buyers-hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  z-index: 1;
+}
+
+.buyers-hero-slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.buyers-slide-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%);
+  z-index: 1;
+}
+
+.buyers-slide-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+  width: 80%;
+  max-width: 800px;
+}
+
+.buyers-hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.buyers-hero-subtitle {
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+/* Slider Navigation */
+.buyers-slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.3);
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  z-index: 10;
+  backdrop-filter: blur(5px);
+}
+
+.buyers-slider-arrow:hover {
+  background: rgba(255,255,255,0.5);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.buyers-prev {
+  left: 20px;
+}
+
+.buyers-next {
+  right: 20px;
+}
+
+.buyers-slider-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.buyers-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buyers-dot.active {
+  background: #ff6b35;
+  width: 30px;
+  border-radius: 6px;
+}
+
+/* Introduction Section */
+.buyers-intro-section {
+  text-align: center;
+  padding: 80px 20px 40px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.buyers-main-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1a3c34;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.buyers-main-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #ff6b35;
+  border-radius: 2px;
+}
+
+.buyers-main-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Statistics Section */
+.buyers-stats-section {
+  padding: 60px 20px;
+  background: white;
+}
+
+.buyers-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.buyers-stat-card {
+  text-align: center;
+  padding: 30px;
+  background: #f8f9fa;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.buyers-stat-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.buyers-stat-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.buyers-stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ff6b35;
+  margin-bottom: 10px;
+}
+
+.buyers-stat-label {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Filter Section */
+.buyers-filter-section {
+  padding: 40px 20px;
+  background: #f8f9fa;
+}
+
+.buyers-section-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a3c34;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.buyers-section-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #ff6b35;
+  border-radius: 2px;
+}
+
+.buyers-region-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.buyers-filter-btn {
+  padding: 12px 30px;
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buyers-filter-btn:hover {
+  border-color: #ff6b35;
+  color: #ff6b35;
+  transform: translateY(-2px);
+}
+
+.buyers-filter-btn.active {
+  background: #ff6b35;
+  border-color: #ff6b35;
+  color: white;
+  box-shadow: 0 4px 15px rgba(255,107,53,0.3);
+}
+
+/* Buyers Grid Section */
+.buyers-grid-section {
+  padding: 60px 20px;
+  background: white;
+}
+
+.buyers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.buyers-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.buyers-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.buyers-card-logo {
+  padding: 40px;
+  text-align: center;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.buyers-card-logo img {
+  max-width: 150px;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.buyers-card-content {
+  padding: 25px;
+  position: relative;
+}
+
+.buyers-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a3c34;
+  margin-bottom: 5px;
+}
+
+.buyers-country {
+  color: #ff6b35;
+  font-weight: 500;
+  margin-bottom: 15px;
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(255,107,53,0.1);
+  border-radius: 20px;
+}
+
+.buyers-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.buyers-details {
+  margin: 15px 0;
+  padding: 15px 0;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.buyers-detail-item {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.buyers-detail-item strong {
+  color: #1a3c34;
+}
+
+.buyers-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #1a3c34;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Testimonials Section */
+.buyers-testimonials-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.buyers-testimonials-subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+}
+
+.buyers-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.buyers-testimonial-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.buyers-testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.buyers-testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.buyers-testimonial-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.buyers-testimonial-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.buyers-testimonial-info {
+  flex: 1;
+}
+
+.buyers-testimonial-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a3c34;
+  margin-bottom: 3px;
+}
+
+.buyers-testimonial-designation {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.buyers-testimonial-company {
+  font-size: 0.85rem;
+  color: #ff6b35;
+  font-weight: 500;
+}
+
+.buyers-testimonial-rating {
+  color: #ffc107;
+  font-size: 1rem;
+}
+
+.buyers-testimonial-quote {
+  font-size: 4rem;
+  color: #ff6b35;
+  opacity: 0.3;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.buyers-testimonial-text {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.buyers-testimonial-date {
+  font-size: 0.8rem;
+  color: #999;
+  text-align: right;
+}
+
+/* Benefits Section */
+.buyers-benefits-section {
+  padding: 80px 20px;
+  background: white;
+}
+
+.buyers-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.buyers-benefit-card {
+  text-align: center;
+  padding: 40px 30px;
+  background: #f8f9fa;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.buyers-benefit-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.buyers-benefit-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.buyers-benefit-card h3 {
+  font-size: 1.3rem;
+  color: #1a3c34;
+  margin-bottom: 15px;
+}
+
+.buyers-benefit-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* CTA Section */
+.buyers-cta-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #1a3c34 0%, #0d2620 100%);
+  color: white;
+}
+
+.buyers-cta-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.buyers-cta-section p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.buyers-cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.buyers-cta-btn {
+  padding: 15px 40px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buyers-cta-primary {
+  background: #ff6b35;
+  color: white;
+}
+
+.buyers-cta-primary:hover {
+  background: white;
+  color: #ff6b35;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.buyers-cta-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.buyers-cta-secondary:hover {
+  background: white;
+  color: #1a3c34;
+  transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll Animation Classes */
+.buyers-card,
+.buyers-testimonial-card,
+.buyers-benefit-card,
+.buyers-stat-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.buyers-card.active,
+.buyers-testimonial-card.active,
+.buyers-benefit-card.active,
+.buyers-stat-card.active,
+.buyers-section-heading.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .buyers-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+  
+  .buyers-testimonials-grid {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+}
+
+@media (max-width: 992px) {
+  .buyers-hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .buyers-hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .buyers-main-title {
+    font-size: 2.5rem;
+  }
+  
+  .buyers-section-heading {
+    font-size: 2rem;
+  }
+  
+  .buyers-cta-section h2 {
+    font-size: 2rem;
+  }
+  
+  .buyers-stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .buyers-hero-wrapper {
+    height: 60vh;
+    min-height: 400px;
+  }
+  
+  .buyers-hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .buyers-hero-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .buyers-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .buyers-testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .buyers-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .buyers-region-filters {
+    gap: 10px;
+  }
+  
+  .buyers-filter-btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .buyers-cta-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .buyers-cta-btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+  
+  .buyers-stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  
+  .buyers-stat-number {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .buyers-hero-title {
+    font-size: 1.5rem;
+  }
+  
+  .buyers-main-title {
+    font-size: 1.8rem;
+  }
+  
+  .buyers-section-heading {
+    font-size: 1.5rem;
+  }
+  
+  .buyers-slider-arrow {
+    padding: 10px 15px;
+    font-size: 18px;
+  }
+  
+  .buyers-testimonial-header {
+    flex-wrap: wrap;
+  }
+  
+  .buyers-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .buyers-cta-btn {
+    width: 100%;
+    max-width: 250px;
+  }
+}

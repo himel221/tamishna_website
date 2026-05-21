@@ -1,0 +1,880 @@
+/* base1.css - Professional Header & Footer Styles */
+
+/* Import Google Fonts and Font Awesome */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+/* ===== GLOBAL RESETS ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f4f7fc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===== APP WRAPPER ===== */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== HEADER STYLES ===== */
+.app-header {
+  background: linear-gradient(135deg, #0b1120 0%, #1a1f35 100%);
+  color: white;
+  padding: 0.8rem 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+/* Animated header border */
+.app-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899, #8b5cf6, #3b82f6);
+  background-size: 200% 100%;
+  animation: headerGradient 8s linear infinite;
+  z-index: 1;
+}
+
+@keyframes headerGradient {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
+}
+
+/* ===== BRAND/LOGO STYLES ===== */
+.brand-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.brand-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  padding-right: 15px;
+}
+
+.brand-logo-main {
+  height: 55px;
+  width: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  animation: logoGlow 3s ease-in-out infinite;
+}
+
+.brand-logo-main:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6);
+  border-color: rgba(59, 130, 246, 0.4);
+}
+
+@keyframes logoGlow {
+  0%, 100% { box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3); }
+  50% { box-shadow: 0 8px 25px rgba(139, 92, 246, 0.5); }
+}
+
+.brand-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  position: relative;
+  overflow: hidden;
+}
+
+.brand-name-main {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.5px;
+}
+
+.brand-suffix {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #e3dbf7;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: -2px;
+}
+
+/* Vertical divider */
+.brand-container::after {
+  content: '';
+  position: absolute;
+  right: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 40px;
+  background: linear-gradient(180deg, transparent, #3b82f6, #8b5cf6, #ec4899, transparent);
+  border-radius: 1px;
+}
+
+/* Brand hover animation */
+.brand-text-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #3b82f6, #8b5cf6, #ec4899, transparent);
+  transition: left 0.5s ease;
+}
+
+.brand-link:hover .brand-text-wrapper::after {
+  left: 100%;
+}
+
+/* ===== NAVIGATION MENU ===== */
+.nav-menu {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  list-style: none;
+}
+
+.nav-item {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.5rem 0;
+  white-space: nowrap;
+  opacity: 0.9;
+  letter-spacing: 0.3px;
+  list-style: none;
+}
+
+.nav-item:hover {
+  color: #a5b4fc;
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  transition: width 0.3s ease;
+  border-radius: 1px;
+}
+
+.nav-item:hover::after,
+.nav-item.active::after {
+  width: 100%;
+}
+
+.nav-item.active {
+  color: #a5b4fc;
+  opacity: 1;
+  font-weight: 600;
+  transform: translateY(-2px);
+}
+
+/* ===== PAGE CONTENT ===== */
+.page-content {
+  flex: 1 0 auto;
+  padding: 3rem 0 5rem 0;
+  background: linear-gradient(135deg, #f6f9fc 0%, #eef2f6 100%);
+  width: 100%;
+}
+
+/* ===== FOOTER STYLES ===== */
+.site-footer {
+  background: linear-gradient(135deg, #0b1120 0%, #1a1f35 100%);
+  color: white;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Decorative elements */
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899, #8b5cf6, #3b82f6);
+  background-size: 200% 100%;
+  animation: footerGradient 8s linear infinite;
+  z-index: 1;
+}
+
+@keyframes footerGradient {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
+}
+
+/* ===== FOOTER GRID ===== */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 2fr 2.2fr;
+  gap: 2rem;
+  padding: 3rem 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Footer blocks */
+.footer-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-heading {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  border-radius: 2px;
+}
+
+/* ===== COMPANY INFO ===== */
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-brand-img {
+  height: 55px;
+  width: auto;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.footer-brand-img:hover {
+  transform: scale(1.08);
+  border-color: #3b82f6;
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.4);
+}
+
+.footer-brand-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer-description {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+/* ===== FOOTER LINKS ===== */
+.footer-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-menu li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  display: inline-block;
+  position: relative;
+}
+
+.footer-link:hover {
+  color: #a5b4fc;
+  transform: translateX(5px);
+}
+
+/* ===== CONTACT INFORMATION ===== */
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact-row {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+  padding: 0.3rem 0;
+}
+
+.contact-row:hover {
+  transform: translateX(5px);
+}
+
+.contact-icon {
+  color: #8b5cf6;
+  font-size: 1.2rem;
+  margin-top: 3px;
+  min-width: 24px;
+}
+
+.contact-text {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.contact-text p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.contact-text p:first-child {
+  margin-bottom: 0.2rem;
+}
+
+/* ===== SOCIAL MEDIA ICONS ===== */
+.social-icons {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-icon:hover {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+}
+
+.social-icon i {
+  font-size: 1.2rem;
+}
+
+/* ===== NEWSLETTER ===== */
+.newsletter-box {
+  margin-top: 1rem;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.newsletter-input {
+  flex: 1;
+  min-width: 140px;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  color: white;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.newsletter-input:focus {
+  border-color: #8b5cf6;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.newsletter-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.newsletter-btn {
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.newsletter-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(59, 130, 246, 0.4);
+}
+
+/* ===== FOOTER BOTTOM ===== */
+.footer-bottom-bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 1.5rem 5%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.footer-bottom-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.copyright-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.footer-bottom-menu {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-bottom-link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom-link:hover {
+  color: #a5b4fc;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .brand-container::after {
+    display: none;
+  }
+  
+  .nav-menu {
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+    padding-top: 0.8rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 5%;
+  }
+  
+  .footer-block {
+    text-align: center;
+  }
+  
+  .footer-heading::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+  }
+  
+  .footer-brand {
+    justify-content: center;
+  }
+  
+  .footer-description {
+    text-align: center;
+  }
+  
+  .footer-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-row {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-bottom-menu {
+    justify-content: center;
+  }
+  
+  .newsletter-form {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .brand-name-main {
+    font-size: 1.2rem;
+  }
+  
+  .brand-suffix {
+    font-size: 0.8rem;
+  }
+  
+  .brand-logo-main {
+    height: 40px;
+  }
+  
+  .nav-menu {
+    gap: 1rem;
+  }
+  
+  .nav-item {
+    font-size: 0.85rem;
+  }
+  
+  .contact-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .contact-icon {
+    margin-bottom: 0.3rem;
+  }
+  
+  .newsletter-form {
+    flex-direction: column;
+  }
+  
+  .newsletter-btn {
+    width: 100%;
+  }
+  
+  .footer-bottom-menu {
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Add these styles to your existing base1.css */
+
+/* ===== STICKY HEADER STYLES ===== */
+.app-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #0b1120 0%, #192132 100%);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Header scroll effect */
+.app-wrapper.scrolled {
+  background: linear-gradient(135deg, rgba(11, 17, 32, 0.98) 0%, rgba(25, 33, 50, 0.98) 100%);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo scale effect on scroll */
+.app-wrapper.scrolled .brand-logo-main {
+  height: 45px;
+  transform: scale(0.95);
+}
+
+/* Text size reduction on scroll */
+.app-wrapper.scrolled .brand-name-main {
+  font-size: 1.2rem;
+}
+
+.app-wrapper.scrolled .brand-suffix {
+  font-size: 0.85rem;
+}
+
+/* Menu items scale effect on scroll */
+.app-wrapper.scrolled .nav-item {
+  font-size: 0.9rem;
+  padding: 0.4rem 0;
+}
+
+/* Header Spacer - prevents content jump */
+.header-spacer {
+  height: 85px;
+  width: 100%;
+}
+
+/* Adjust spacer on scroll */
+.app-wrapper.scrolled + .header-spacer {
+  height: 75px;
+}
+
+/* Smooth transition for header elements */
+.app-header,
+.brand-logo-main,
+.brand-name-main,
+.brand-suffix,
+.nav-item {
+  transition: all 0.3s ease;
+}
+
+/* Ensure header content is properly aligned */
+.app-header {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.8rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: padding 0.3s ease;
+}
+
+.app-wrapper.scrolled .app-header {
+  padding: 0.5rem 5%;
+}
+
+/* Brand container styles */
+.brand-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.brand-logo-main {
+  height: 55px;
+  width: auto;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.brand-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.brand-name-main {
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 0.3s ease;
+}
+
+.brand-suffix {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #e3dbf7;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+/* Navigation menu styles */
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-item {
+  list-style: none;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  transition: width 0.3s ease;
+}
+
+.nav-item:hover::after,
+.nav-item.active::after {
+  width: 100%;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  color: #a5b4fc;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .app-wrapper.scrolled .app-header {
+    padding: 0.8rem 1rem;
+  }
+  
+  .header-spacer {
+    height: 120px;
+  }
+  
+  .app-wrapper.scrolled + .header-spacer {
+    height: 105px;
+  }
+  
+  .nav-menu {
+    gap: 1.2rem;
+    width: 100%;
+    justify-content: center;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .brand-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .brand-name-main {
+    font-size: 1.2rem;
+  }
+  
+  .app-wrapper.scrolled .brand-name-main {
+    font-size: 1rem;
+  }
+  
+  .brand-suffix {
+    font-size: 0.8rem;
+  }
+  
+  .app-wrapper.scrolled .brand-suffix {
+    font-size: 0.7rem;
+  }
+  
+  .header-spacer {
+    height: 110px;
+  }
+  
+  .app-wrapper.scrolled + .header-spacer {
+    height: 95px;
+  }
+  
+  .nav-menu {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .nav-item {
+    font-size: 0.85rem;
+  }
+}
+
+/* Ensure page content doesn't overlap with fixed header */
+.page-content {
+  margin-top: 0;
+  padding-top: 0;
+  min-height: calc(100vh - 80px);
+}

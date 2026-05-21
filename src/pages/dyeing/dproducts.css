@@ -1,0 +1,956 @@
+/* Dyeing Products Page Styles - dproducts.css */
+.dyeing-products-container {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Poppins', 'Segoe UI', 'Arial', sans-serif;
+}
+
+/* Hero Slider Section */
+.dyeing-hero-wrapper {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.dyeing-hero-slider-section {
+  width: 100%;
+  height: 100%;
+}
+
+.dyeing-slider-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.dyeing-hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  z-index: 1;
+}
+
+.dyeing-hero-slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.dyeing-slide-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%);
+  z-index: 1;
+}
+
+.dyeing-slide-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+  width: 80%;
+  max-width: 800px;
+}
+
+.dyeing-hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  animation: dyeingFadeInUp 0.8s ease-out;
+}
+
+.dyeing-hero-subtitle {
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  animation: dyeingFadeInUp 0.8s ease-out 0.2s both;
+}
+
+/* Slider Navigation */
+.dyeing-slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.3);
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  z-index: 10;
+  backdrop-filter: blur(5px);
+}
+
+.dyeing-slider-arrow:hover {
+  background: rgba(255,255,255,0.5);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.dyeing-prev {
+  left: 20px;
+}
+
+.dyeing-next {
+  right: 20px;
+}
+
+.dyeing-slider-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.dyeing-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dyeing-dot.active {
+  background: #ff6b35;
+  width: 30px;
+  border-radius: 6px;
+}
+
+/* Dyeing Header Section */
+.dyeing-header-section {
+  text-align: center;
+  padding: 80px 20px 40px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.dyeing-main-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1a3c34;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.dyeing-main-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #ff6b35;
+  border-radius: 2px;
+}
+
+.dyeing-main-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Filter Section */
+.dyeing-filter-section {
+  padding: 40px 20px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.dyeing-search-bar {
+  max-width: 500px;
+  margin: 0 auto 30px;
+  position: relative;
+}
+
+.dyeing-search-input {
+  width: 100%;
+  padding: 15px 50px 15px 20px;
+  font-size: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.dyeing-search-input:focus {
+  border-color: #ff6b35;
+  box-shadow: 0 0 0 3px rgba(255,107,53,0.1);
+}
+
+.dyeing-search-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #999;
+}
+
+.dyeing-category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.dyeing-filter-btn {
+  padding: 10px 25px;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dyeing-filter-btn:hover {
+  background: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+.dyeing-filter-btn.active {
+  background: #ff6b35;
+  color: white;
+  box-shadow: 0 4px 15px rgba(255,107,53,0.3);
+}
+
+/* Dyeing Grid Section */
+.dyeing-grid-section {
+  padding: 60px 20px;
+  background: #f8f9fa;
+}
+
+.dyeing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.dyeing-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: dyeingFadeInUp 0.6s ease forwards;
+}
+
+.dyeing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.dyeing-card-image {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+}
+
+.dyeing-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.dyeing-card:hover .dyeing-card-image img {
+  transform: scale(1.05);
+}
+
+.dyeing-card-code {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  backdrop-filter: blur(5px);
+}
+
+.dyeing-card-category-badge {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: rgba(255,107,53,0.9);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  backdrop-filter: blur(5px);
+}
+
+.dyeing-card-content {
+  padding: 25px;
+}
+
+.dyeing-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a3c34;
+  margin-bottom: 10px;
+}
+
+.dyeing-card-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.dyeing-specs {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.dyeing-specs h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1a3c34;
+  margin-bottom: 10px;
+}
+
+.dyeing-specs ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.dyeing-specs li {
+  font-size: 0.85rem;
+  color: #666;
+  padding: 4px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.dyeing-specs li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #ff6b35;
+  font-weight: bold;
+}
+
+.dyeing-inquiry-btn {
+  width: 100%;
+  padding: 12px;
+  background: #1a3c34;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+.dyeing-inquiry-btn:hover {
+  background: #ff6b35;
+  transform: translateY(-2px);
+}
+
+/* No Results */
+.dyeing-no-results {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.dyeing-no-results p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.dyeing-no-results button {
+  padding: 12px 30px;
+  background: #ff6b35;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dyeing-no-results button:hover {
+  background: #1a3c34;
+  transform: translateY(-2px);
+}
+
+/* Categories Overview Section */
+.dyeing-categories-overview {
+  padding: 80px 20px;
+  background: white;
+}
+
+.dyeing-section-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a3c34;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.dyeing-section-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #ff6b35;
+  border-radius: 2px;
+}
+
+.dyeing-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dyeing-category-card {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dyeing-category-card:hover {
+  transform: translateY(-10px);
+  background: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.dyeing-category-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.dyeing-category-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1a3c34;
+  margin-bottom: 10px;
+}
+
+.dyeing-category-description {
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.dyeing-category-count {
+  display: inline-block;
+  background: #ff6b35;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Manufacturing Capabilities */
+.dyeing-capabilities-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #1a3c34 0%, #0d2620 100%);
+  color: white;
+}
+
+.dyeing-capabilities-section .dyeing-section-heading {
+  color: white;
+}
+
+.dyeing-capabilities-section .dyeing-section-heading::after {
+  background: #ff6b35;
+}
+
+.dyeing-capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dyeing-capability-card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.dyeing-capability-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255,255,255,0.2);
+}
+
+.dyeing-capability-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.dyeing-capability-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.dyeing-capability-card p {
+  color: rgba(255,255,255,0.8);
+  line-height: 1.6;
+}
+
+.dyeing-capability-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.dyeing-capability-features span {
+  background: rgba(255,255,255,0.2);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+/* Production Capacity Highlight - Dyeing Excellence Section */
+.dyeing-capacity-highlight {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+
+.dyeing-capacity-highlight-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dyeing-capacity-highlight-container h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a3c34;
+  margin-bottom: 50px;
+  position: relative;
+  display: inline-block;
+}
+
+.dyeing-capacity-highlight-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #ff6b35;
+  border-radius: 2px;
+}
+
+.dyeing-capacity-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.dyeing-capacity-stat {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.dyeing-capacity-stat:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.dyeing-stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ff6b35;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.dyeing-stat-label {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 500;
+}
+
+/* CTA Section */
+.dyeing-cta-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #ff6b35 0%, #ff8c5a 100%);
+  color: white;
+}
+
+.dyeing-cta-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.dyeing-cta-section p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.dyeing-cta-btn {
+  padding: 15px 40px;
+  background: white;
+  color: #ff6b35;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dyeing-cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Animations */
+@keyframes dyeingFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll Animation Classes */
+.dyeing-card,
+.dyeing-category-card,
+.dyeing-capability-card,
+.dyeing-capacity-stat {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.dyeing-card.active,
+.dyeing-category-card.active,
+.dyeing-capability-card.active,
+.dyeing-capacity-stat.active,
+.dyeing-section-heading.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .dyeing-grid {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+  }
+  
+  .dyeing-capacity-stats {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .dyeing-hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .dyeing-hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .dyeing-main-title {
+    font-size: 2.5rem;
+  }
+  
+  .dyeing-section-heading {
+    font-size: 2rem;
+  }
+  
+  .dyeing-cta-section h2 {
+    font-size: 2rem;
+  }
+  
+  .dyeing-capacity-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .dyeing-capacity-highlight-container h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .dyeing-hero-wrapper {
+    height: 60vh;
+    min-height: 400px;
+  }
+  
+  .dyeing-hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .dyeing-hero-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .dyeing-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .dyeing-card-image {
+    height: 240px;
+  }
+  
+  .dyeing-category-filters {
+    gap: 10px;
+  }
+  
+  .dyeing-filter-btn {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+  }
+  
+  .dyeing-categories-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .dyeing-capabilities-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .dyeing-cta-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .dyeing-cta-section p {
+    font-size: 1rem;
+  }
+  
+  .dyeing-cta-btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+  
+  .dyeing-capacity-stats {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .dyeing-stat-number {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dyeing-hero-title {
+    font-size: 1.5rem;
+  }
+  
+  .dyeing-main-title {
+    font-size: 1.8rem;
+  }
+  
+  .dyeing-section-heading {
+    font-size: 1.5rem;
+  }
+  
+  .dyeing-card-title {
+    font-size: 1.2rem;
+  }
+  
+  .dyeing-card-content {
+    padding: 20px;
+  }
+  
+  .dyeing-slider-arrow {
+    padding: 10px 15px;
+    font-size: 18px;
+  }
+  
+  .dyeing-capacity-highlight-container h2 {
+    font-size: 1.5rem;
+  }
+  
+  .dyeing-stat-number {
+    font-size: 1.8rem;
+  }
+  
+  .dyeing-stat-label {
+    font-size: 0.9rem;
+  }
+}
+
+/* Add this at the end of your dproducts.css file - Dyeing Excellence Section Fix */
+
+.dyeing-capacity-highlight {
+  padding: 80px 20px;
+  background: #f8f9fa;
+  text-align: center;
+  width: 100%;
+  display: block;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.dyeing-capacity-highlight-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dyeing-capacity-highlight-container h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a3c34;
+  margin-bottom: 50px;
+  position: relative;
+  display: inline-block;
+}
+
+.dyeing-capacity-highlight-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #ff6b35;
+  border-radius: 2px;
+}
+
+.dyeing-capacity-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.dyeing-capacity-stat {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.dyeing-capacity-stat:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.dyeing-stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ff6b35;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.dyeing-stat-label {
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .dyeing-capacity-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .dyeing-capacity-highlight-container h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .dyeing-capacity-highlight {
+    padding: 40px 20px;
+  }
+  
+  .dyeing-capacity-stats {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .dyeing-stat-number {
+    font-size: 2rem;
+  }
+  
+  .dyeing-capacity-highlight-container h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dyeing-capacity-highlight-container h2 {
+    font-size: 1.4rem;
+  }
+  
+  .dyeing-stat-number {
+    font-size: 1.6rem;
+  }
+  
+  .dyeing-stat-label {
+    font-size: 0.85rem;
+  }
+}
