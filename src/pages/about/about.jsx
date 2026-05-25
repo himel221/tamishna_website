@@ -649,73 +649,280 @@ const About = () => {
       </section>
 
       {/* Thread Specification Section - Keep as is, it's very long but working */}
-      <section id="thread-specification" className="thread-specification">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Thread Specification</h2>
-            <div className="section-divider"></div>
-            <p className="section-subtitle">Technical specifications of our premium thread collections</p>
-          </div>
+{/* Thread Specification Section - Updated with complete product data */}
+<section id="thread-specification" className="thread-specification">
+  <div className="container">
+    <div className="section-header">
+      <h2 className="section-title">Thread Specification</h2>
+      <div className="section-divider"></div>
+      <p className="section-subtitle">Technical specifications of our premium thread collections</p>
+    </div>
 
-          <div className="spec-tabs">
-            <button className="spec-tab-btn active" data-tab="classic"><span>🧵</span> Etafil Classic</button>
-            <button className="spec-tab-btn" data-tab="comfort"><span>✨</span> Etafil Comfort</button>
-            <button className="spec-tab-btn" data-tab="shield"><span>🛡️</span> Etafil Shield</button>
-            <button className="spec-tab-btn" data-tab="shield-plus"><span>⭐</span> Etafil Shield Plus</button>
-            <button className="spec-tab-btn" data-tab="legend"><span>🏆</span> Etafil Legend</button>
-            <button className="spec-tab-btn" data-tab="legend-plus"><span>💎</span> Etafil Legend Plus</button>
-            <button className="spec-tab-btn" data-tab="eco-classic"><span>♻️</span> Etafil Eco Classic</button>
-            <button className="spec-tab-btn" data-tab="eco-comfort"><span>🌿</span> Etafil Eco Comfort</button>
-            <button className="spec-tab-btn" data-tab="eco-shield"><span>🛡️♻️</span> Etafil Eco Shield</button>
-            <button className="spec-tab-btn" data-tab="eco-shield-plus"><span>⭐♻️</span> Etafil Eco Shield Plus</button>
-            <button className="spec-tab-btn" data-tab="etacotton"><span>🌾</span> Eta Cotton</button>
-            <button className="spec-tab-btn" data-tab="embroidery"><span>🎨</span> Etafil Emb</button>
-            <button className="spec-tab-btn" data-tab="etaflex"><span>💪</span> Etaflex</button>
-            <button className="spec-tab-btn" data-tab="etagral"><span>🔗</span> Etagral</button>
-            <button className="spec-tab-btn" data-tab="pva"><span>💧</span> Eta PVA</button>
-            <button className="spec-tab-btn" data-tab="nylon"><span>🪢</span> Eta Nylon</button>
-          </div>
+    <div className="spec-tabs">
+      <button className="spec-tab-btn active" data-tab="classic"><span>🧵</span> Etafil Classic</button>
+      <button className="spec-tab-btn" data-tab="comfort"><span>✨</span> Etafil Comfort</button>
+      <button className="spec-tab-btn" data-tab="shield"><span>🛡️</span> Etafil Shield</button>
+      <button className="spec-tab-btn" data-tab="shield-plus"><span>⭐</span> Etafil Shield Plus</button>
+      <button className="spec-tab-btn" data-tab="legend"><span>🏆</span> Etafil Legend</button>
+      <button className="spec-tab-btn" data-tab="legend-plus"><span>💎</span> Etafil Legend Plus</button>
+      <button className="spec-tab-btn" data-tab="eco-classic"><span>♻️</span> Etafil Eco Classic</button>
+      <button className="spec-tab-btn" data-tab="eco-comfort"><span>🌿</span> Etafil Eco Comfort</button>
+      <button className="spec-tab-btn" data-tab="eco-shield"><span>🛡️♻️</span> Etafil Eco Shield</button>
+      <button className="spec-tab-btn" data-tab="eco-shield-plus"><span>⭐♻️</span> Etafil Eco Shield Plus</button>
+      <button className="spec-tab-btn" data-tab="etacotton"><span>🌾</span> Eta Cotton</button>
+      <button className="spec-tab-btn" data-tab="embroidery"><span>🎨</span> Etafil Embroidery</button>
+      <button className="spec-tab-btn" data-tab="etaflex"><span>💪</span> Etaflex</button>
+      <button className="spec-tab-btn" data-tab="etagral"><span>🔗</span> Etagral</button>
+      <button className="spec-tab-btn" data-tab="pva"><span>💧</span> Eta PVA</button>
+      <button className="spec-tab-btn" data-tab="nylon"><span>🪢</span> Eta Nylon</button>
+    </div>
 
-          {/* All table containers remain the same */}
-          <div className="spec-table-container active" id="tab-classic">
-            <div className="table-responsive">
-              <table className="spec-table"><thead><tr><th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th></tr></thead><tbody><tr><td>50/2</td><td>24</td><td>130</td><td>4000</td><td>850</td><td>13-20</td><td>9</td></tr><tr><td>60/2</td><td>18</td><td>180</td><td>4000</td><td>650</td><td>13-20</td><td>7</td></tr></tbody></table>
-            </div>
-          </div>
+    {/* Tab 1: Etafil Classic */}
+    <div className="spec-table-container active" id="tab-classic">
+      <div className="table-responsive">
+        <table className="spec-table">
+          <thead>
+            <tr>
+              <th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>50/2</td><td>24</td><td>130</td><td>4000</td><td>850</td><td>13-20</td><td>9</td></tr>
+            <tr><td>60/2</td><td>18</td><td>180</td><td>4000</td><td>650</td><td>13-20</td><td>7</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
 
-          {/* Add remaining tables as they were - keeping them short for brevity */}
-          <div className="spec-table-container" id="tab-comfort"><div className="table-responsive"><table className="spec-table"><thead><tr><th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th></tr></thead><tbody><tr><td>150D SIM</td><td>18</td><td>180</td><td>4000</td><td>660</td><td>20-32</td><td>8</td></tr><tr><td>150D NIM</td><td>18</td><td>180</td><td>4000</td><td>650</td><td>20-32</td><td>8</td></tr></tbody></table></div></div>
-          
-          {/* Add all other tables - keeping existing structure */}
-          <div className="spec-table-container" id="tab-shield"><div className="table-responsive"><table className="spec-table"><thead><tr><th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th></tr></thead><tbody><tr><td>40/2</td><td>27</td><td>120</td><td>4000</td><td>980</td><td>13-20</td><td>11</td></tr><tr><td>60/3</td><td>29</td><td>120</td><td>4000</td><td>1050</td><td>13-20</td><td>11</td></tr><tr><td>40/3</td><td>40</td><td>75</td><td>3000</td><td>1650</td><td>13-20</td><td>14</td></tr></tbody></table></div></div>
-          
-          <div className="spec-table-container" id="tab-shield-plus"><div className="table-responsive"><table className="spec-table"><thead><tr><th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th></tr></thead><tbody><tr><td>40/2</td><td>27</td><td>120</td><td>4000</td><td>980</td><td>13-20</td><td>11</td></tr><tr><td>60/3</td><td>29</td><td>120</td><td>4000</td><td>1050</td><td>13-20</td><td>11</td></tr></tbody></table></div></div>
-          
-          <div className="spec-table-container" id="tab-legend"><div className="table-responsive"><table className="spec-table"><thead><tr><th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th></tr></thead><tbody><tr><td>60/2</td><td>18</td><td>180</td><td>4000</td><td>930</td><td>17-22</td><td>7</td></tr><tr><td>50/2</td><td>24</td><td>130</td><td>4000</td><td>1100</td><td>17-22</td><td>9</td></tr></tbody></table></div></div>
-          
-          <div className="spec-table-container" id="tab-legend-plus"><div className="table-responsive"><table className="spec-table"><thead><tr><th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th></tr></thead><tbody><tr><td>60/2</td><td>18</td><td>180</td><td>4000</td><td>930</td><td>17-22</td><td>7</td></tr><tr><td>50/2</td><td>24</td><td>130</td><td>4000</td><td>1100</td><td>17-22</td><td>9</td></tr></tbody></table></div></div>
-          
-          <div className="spec-table-container" id="tab-eco-classic"><div className="table-responsive"><table className="spec-table"><thead><tr><th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th></tr></thead><tbody><tr><td>50/2</td><td>24</td><td>130</td><td>4000</td><td>810</td><td>13-20</td><td>9</td></tr></tbody></table></div></div>
-          
-          <div className="spec-table-container" id="tab-eco-comfort"><div className="table-responsive"><table className="spec-table"><thead><tr><th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th></tr></thead><tbody><tr><td>150D SIM</td><td>18</td><td>180</td><td>4000</td><td>640</td><td>20-32</td><td>8</td></tr></tbody></table></div></div>
-          
-          <div className="spec-table-container" id="tab-eco-shield"><div className="table-responsive"><table className="spec-table"><thead><tr><th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th></tr></thead><tbody><tr><td>40/2</td><td>27</td><td>120</td><td>4000</td><td>810</td><td>13-20</td><td>11</td></tr></tbody></table></div></div>
-          
-          <div className="spec-table-container" id="tab-eco-shield-plus"><div className="table-responsive"><table className="spec-table"><thead><tr><th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th></tr></thead><tbody><tr><td>40/2</td><td>27</td><td>120</td><td>4000</td><td>810</td><td>13-20</td><td>11</td></tr></tbody></table></div></div>
-          
-          <div className="spec-table-container" id="tab-etacotton"><div className="table-responsive"><table className="spec-table"><thead><tr><th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th></tr></thead><tbody><tr><td>40/2</td><td>27</td><td>120</td><td>4000</td><td>900</td><td>5-8</td><td>11</td></tr></tbody></table></div></div>
-          
-          <div className="spec-table-container" id="tab-embroidery"><div className="table-responsive"><table className="spec-table"><thead><tr><th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th></tr></thead><tbody><tr><td>120/2</td><td>27</td><td>120</td><td>3000</td><td>9</td><td>18-22</td><td>11</td></tr></tbody></table></div></div>
-          
-          <div className="spec-table-container" id="tab-etaflex"><div className="table-responsive"><table className="spec-table"><thead><tr><th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th></tr></thead><tbody><tr><td>150D/2</td><td>30</td><td>120</td><td>4000</td><td>950</td><td>40-80</td><td>11</td></tr></tbody></table></div></div>
-          
-          <div className="spec-table-container" id="tab-etagral"><div className="table-responsive"><table className="spec-table"><thead><tr><th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th></tr></thead><tbody><tr><td>50D/2</td><td>10</td><td>300</td><td>4000</td><td>690</td><td>16-22</td><td>9</td></tr></tbody></table></div></div>
-          
-          <div className="spec-table-container" id="tab-pva"><div className="table-responsive"><table className="spec-table"><thead><tr><th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th></tr></thead><tbody><tr><td>40/2</td><td>27</td><td>120</td><td>4000</td><td>660</td><td>14-23</td><td>11</td></tr></tbody></table></div></div>
-          
-          <div className="spec-table-container" id="tab-nylon"><div className="table-responsive"><table className="spec-table"><thead><tr><th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th></tr></thead><tbody><tr><td>70D/2</td><td>18</td><td>180</td><td>4000</td><td>690</td><td>20-32</td><td>9</td></tr></tbody></table></div></div>
-        </div>
-      </section>
+    {/* Tab 2: Etafil Comfort */}
+    <div className="spec-table-container" id="tab-comfort">
+      <div className="table-responsive">
+        <table className="spec-table">
+          <thead><tr><th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th></tr></thead>
+          <tbody>
+            <tr><td>150D SIM</td><td>18</td><td>180</td><td>4000</td><td>660</td><td>20-32</td><td>8</td></tr>
+            <tr><td>150D NIM</td><td>18</td><td>180</td><td>4000</td><td>650</td><td>20-32</td><td>8</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    {/* Tab 3: Etafil Shield - Complete */}
+    <div className="spec-table-container" id="tab-shield">
+      <div className="table-responsive">
+        <table className="spec-table">
+          <thead><tr><th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th></tr></thead>
+          <tbody>
+            <tr><td>40/2</td><td>27</td><td>120</td><td>4000</td><td>980</td><td>13-20</td><td>11</td></tr>
+            <tr><td>60/3</td><td>29</td><td>120</td><td>4000</td><td>1050</td><td>13-20</td><td>11</td></tr>
+            <tr><td>40/3</td><td>40</td><td>75</td><td>3000</td><td>1650</td><td>13-20</td><td>14</td></tr>
+            <tr><td>30/2</td><td>40</td><td>75</td><td>3000</td><td>1490</td><td>13-20</td><td>14</td></tr>
+            <tr><td>30/3</td><td>60</td><td>50</td><td>3000</td><td>2200</td><td>15-22</td><td>18</td></tr>
+            <tr><td>20/2</td><td>60</td><td>50</td><td>3000</td><td>2190</td><td>15-22</td><td>18</td></tr>
+            <tr><td>20/3</td><td>80</td><td>30</td><td>2000</td><td>3200</td><td>15-22</td><td>20</td></tr>
+            <tr><td>20/4</td><td>120</td><td>25</td><td>1500</td><td>4550</td><td>15-22</td><td>22</td></tr>
+            <tr><td>12/3</td><td>150</td><td>20</td><td>1000</td><td>5230</td><td>15-22</td><td>24</td></tr>
+            <tr><td>20/6</td><td>180</td><td>15</td><td>1000</td><td>7200</td><td>15-22</td><td>24</td></tr>
+            <tr><td>20/9</td><td>270</td><td>10</td><td>500</td><td>9890</td><td>15-22</td><td>26</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    {/* Tab 4: Etafil Shield Plus - Complete */}
+    <div className="spec-table-container" id="tab-shield-plus">
+      <div className="table-responsive">
+        <table className="spec-table">
+          <thead><tr><th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th></tr></thead>
+          <tbody>
+            <tr><td>40/2</td><td>27</td><td>120</td><td>4000</td><td>980</td><td>13-20</td><td>11</td></tr>
+            <tr><td>60/3</td><td>29</td><td>120</td><td>4000</td><td>1050</td><td>13-20</td><td>11</td></tr>
+            <tr><td>40/3</td><td>40</td><td>75</td><td>3000</td><td>1650</td><td>13-20</td><td>14</td></tr>
+            <tr><td>30/2</td><td>40</td><td>75</td><td>3000</td><td>1490</td><td>13-20</td><td>14</td></tr>
+            <tr><td>30/3</td><td>60</td><td>50</td><td>3000</td><td>2200</td><td>15-22</td><td>18</td></tr>
+            <tr><td>20/2</td><td>60</td><td>50</td><td>3000</td><td>2190</td><td>15-22</td><td>18</td></tr>
+            <tr><td>20/3</td><td>80</td><td>30</td><td>2000</td><td>3200</td><td>15-22</td><td>20</td></tr>
+            <tr><td>20/4</td><td>120</td><td>25</td><td>1500</td><td>4550</td><td>15-22</td><td>22</td></tr>
+            <tr><td>12/3</td><td>150</td><td>20</td><td>1000</td><td>5230</td><td>15-22</td><td>24</td></tr>
+            <tr><td>20/6</td><td>180</td><td>15</td><td>1000</td><td>7200</td><td>15-22</td><td>24</td></tr>
+            <tr><td>20/9</td><td>270</td><td>10</td><td>500</td><td>9890</td><td>15-22</td><td>26</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    {/* Tab 5: Etafil Legend - Complete */}
+    <div className="spec-table-container" id="tab-legend">
+      <div className="table-responsive">
+        <table className="spec-table">
+          <thead><tr><th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th></tr></thead>
+          <tbody>
+            <tr><td>60/2</td><td>18</td><td>180</td><td>4000</td><td>930</td><td>17-22</td><td>7</td></tr>
+            <tr><td>50/2</td><td>24</td><td>130</td><td>4000</td><td>1100</td><td>17-22</td><td>9</td></tr>
+            <tr><td>40/2</td><td>27</td><td>120</td><td>4000</td><td>1350</td><td>17-22</td><td>11</td></tr>
+            <tr><td>60/3</td><td>29</td><td>120</td><td>4000</td><td>1380</td><td>17-22</td><td>11</td></tr>
+            <tr><td>40/3</td><td>40</td><td>75</td><td>3000</td><td>2100</td><td>18-25</td><td>14</td></tr>
+            <tr><td>20/2</td><td>60</td><td>50</td><td>3000</td><td>3100</td><td>18-25</td><td>18</td></tr>
+            <tr><td>20/3</td><td>80</td><td>30</td><td>2000</td><td>4550</td><td>18-25</td><td>20</td></tr>
+            <tr><td>20/4</td><td>120</td><td>25</td><td>1500</td><td>5950</td><td>18-27</td><td>22</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    {/* Tab 6: Etafil Legend Plus - Complete */}
+    <div className="spec-table-container" id="tab-legend-plus">
+      <div className="table-responsive">
+        <table className="spec-table">
+          <thead><tr><th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th></tr></thead>
+          <tbody>
+            <tr><td>60/2</td><td>18</td><td>180</td><td>4000</td><td>930</td><td>17-22</td><td>7</td></tr>
+            <tr><td>50/2</td><td>24</td><td>130</td><td>4000</td><td>1100</td><td>17-22</td><td>9</td></tr>
+            <tr><td>40/2</td><td>27</td><td>120</td><td>4000</td><td>1350</td><td>17-22</td><td>11</td></tr>
+            <tr><td>60/3</td><td>29</td><td>120</td><td>4000</td><td>1380</td><td>17-22</td><td>11</td></tr>
+            <tr><td>40/3</td><td>40</td><td>75</td><td>3000</td><td>2100</td><td>18-25</td><td>14</td></tr>
+            <tr><td>20/2</td><td>60</td><td>50</td><td>3000</td><td>3100</td><td>18-25</td><td>18</td></tr>
+            <tr><td>20/3</td><td>80</td><td>30</td><td>2000</td><td>4550</td><td>18-25</td><td>20</td></tr>
+            <tr><td>20/4</td><td>120</td><td>25</td><td>1500</td><td>5950</td><td>18-27</td><td>22</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    {/* Tab 7: Etafil Eco Classic */}
+    <div className="spec-table-container" id="tab-eco-classic">
+      <div className="table-responsive">
+        <table className="spec-table">
+          <thead><tr><th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th></tr></thead>
+          <tbody>
+            <tr><td>50/2</td><td>24</td><td>130</td><td>4000</td><td>810</td><td>13-20</td><td>9</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    {/* Tab 8: Etafil Eco Comfort */}
+    <div className="spec-table-container" id="tab-eco-comfort">
+      <div className="table-responsive">
+        <table className="spec-table">
+          <thead><tr><th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th></tr></thead>
+          <tbody>
+            <tr><td>150D SIM</td><td>18</td><td>180</td><td>4000</td><td>640</td><td>20-32</td><td>8</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    {/* Tab 9: Etafil Eco Shield - Complete */}
+    <div className="spec-table-container" id="tab-eco-shield">
+      <div className="table-responsive">
+        <table className="spec-table">
+          <thead><tr><th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th></tr></thead>
+          <tbody>
+            <tr><td>40/2</td><td>27</td><td>120</td><td>4000</td><td>810</td><td>13-20</td><td>11</td></tr>
+            <tr><td>40/3</td><td>40</td><td>75</td><td>3000</td><td>1480</td><td>13-20</td><td>14</td></tr>
+            <tr><td>20/2</td><td>60</td><td>50</td><td>3000</td><td>2050</td><td>13-20</td><td>18</td></tr>
+            <tr><td>20/3</td><td>80</td><td>30</td><td>2000</td><td>3090</td><td>15-22</td><td>20</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    {/* Tab 10: Etafil Eco Shield Plus - Complete */}
+    <div className="spec-table-container" id="tab-eco-shield-plus">
+      <div className="table-responsive">
+        <table className="spec-table">
+          <thead><tr><th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th></tr></thead>
+          <tbody>
+            <tr><td>40/2</td><td>27</td><td>120</td><td>4000</td><td>810</td><td>13-20</td><td>11</td></tr>
+            <tr><td>40/3</td><td>40</td><td>75</td><td>3000</td><td>1480</td><td>13-20</td><td>14</td></tr>
+            <tr><td>20/2</td><td>60</td><td>50</td><td>3000</td><td>2050</td><td>13-20</td><td>18</td></tr>
+            <tr><td>20/3</td><td>80</td><td>30</td><td>2000</td><td>3090</td><td>15-22</td><td>20</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    {/* Tab 11: Eta Cotton - Complete */}
+    <div className="spec-table-container" id="tab-etacotton">
+      <div className="table-responsive">
+        <table className="spec-table">
+          <thead><tr><th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th></tr></thead>
+          <tbody>
+            <tr><td>40/2</td><td>27</td><td>120</td><td>4000</td><td>900</td><td>5-8</td><td>11</td></tr>
+            <tr><td>40/3</td><td>40</td><td>75</td><td>3000</td><td>1300</td><td>7-10</td><td>14</td></tr>
+            <tr><td>20/2</td><td>60</td><td>50</td><td>3000</td><td>1600</td><td>7-10</td><td>18</td></tr>
+            <tr><td>20/3</td><td>80</td><td>30</td><td>2000</td><td>2300</td><td>7-10</td><td>20</td></tr>
+            <tr><td>20/4</td><td>120</td><td>25</td><td>1500</td><td>2500</td><td>9-12</td><td>22</td></tr>
+            <tr><td>20/6</td><td>180</td><td>15</td><td>1000</td><td>4400</td><td>9-12</td><td>24</td></tr>
+            <tr><td>20/9</td><td>270</td><td>10</td><td>500</td><td>4800</td><td>9-12</td><td>26</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    {/* Tab 12: Etafil Embroidery */}
+    <div className="spec-table-container" id="tab-embroidery">
+      <div className="table-responsive">
+        <table className="spec-table">
+          <thead><tr><th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th></tr></thead>
+          <tbody>
+            <tr><td>120/2</td><td>27</td><td>120</td><td>3000</td><td>9</td><td>18-22</td><td>11</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    {/* Tab 13: Etaflex */}
+    <div className="spec-table-container" id="tab-etaflex">
+      <div className="table-responsive">
+        <table className="spec-table">
+          <thead><tr><th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th></tr></thead>
+          <tbody>
+            <tr><td>150D/2</td><td>30</td><td>120</td><td>4000</td><td>950</td><td>40-80</td><td>11</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    {/* Tab 14: Etagral - Complete */}
+    <div className="spec-table-container" id="tab-etagral">
+      <div className="table-responsive">
+        <table className="spec-table">
+          <thead><tr><th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th></tr></thead>
+          <tbody>
+            <tr><td>50D/2</td><td>10</td><td>300</td><td>4000</td><td>690</td><td>16-22</td><td>9</td></tr>
+            <tr><td>50D/3</td><td>15</td><td>180</td><td>4000</td><td>1050</td><td>16-22</td><td>9</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    {/* Tab 15: Eta PVA */}
+    <div className="spec-table-container" id="tab-pva">
+      <div className="table-responsive">
+        <table className="spec-table">
+          <thead><tr><th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th></tr></thead>
+          <tbody>
+            <tr><td>40/2</td><td>27</td><td>120</td><td>4000</td><td>660</td><td>14-23</td><td>11</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    {/* Tab 16: Eta Nylon */}
+    <div className="spec-table-container" id="tab-nylon">
+      <div className="table-responsive">
+        <table className="spec-table">
+          <thead><tr><th>Count (Ne)</th><th>Tex size</th><th>Ticket No</th><th>Length (m)</th><th>Avg-Strength (cN)</th><th>Elongation % (min-max)</th><th>Recommended Needle Size</th></tr></thead>
+          <tbody>
+            <tr><td>70D/2</td><td>18</td><td>180</td><td>4000</td><td>690</td><td>20-32</td><td>9</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Quality Assurance Section */}
       <section id="quality-assurance" className="quality-assurance-section">

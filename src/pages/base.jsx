@@ -1,15 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 import './base.css';
 
 const Base = ({ children }) => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [downloadLoading, setDownloadLoading] = useState(null);
   const [downloadError, setDownloadError] = useState(null);
+  const basePath = process.env.PUBLIC_URL && process.env.PUBLIC_URL !== '/'
+    ? process.env.PUBLIC_URL
+    : window.location.pathname.startsWith('/etafil')
+      ? '/etafil'
+      : '';
   
   const isActive = (path) => {
     return location.pathname === path;
@@ -50,12 +56,12 @@ const Base = ({ children }) => {
     });
   }, [location.pathname, location.state]);
 
-  // Handle hash navigation when page loads
+  // Handle hash navigation when page loads - Improved for Sustainability page
   useEffect(() => {
-    // Check if there's a hash in the URL
-    if (window.location.hash) {
+    // Check if there's a hash in the URL and we're on the sustainability page
+    if (window.location.hash && location.pathname === '/sustainability') {
       const sectionId = window.location.hash.substring(1); // Remove the #
-      setTimeout(() => {
+      const scrollTimer = setTimeout(() => {
         const element = document.getElementById(sectionId);
         if (element) {
           const headerOffset = 100;
@@ -67,27 +73,11 @@ const Base = ({ children }) => {
             behavior: 'smooth'
           });
         }
-      }, 300); // Delay to ensure page is fully loaded
+      }, 500); // Increased delay for sustainability page content to load
+      
+      return () => clearTimeout(scrollTimer);
     }
-  }, [location.pathname]); // Re-run when pathname changes
-
-  const handleScrollToSection = (sectionId) => {
-    if (location.pathname !== '/sustainability') {
-      window.location.href = `/sustainability#${sectionId}`;
-    } else {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        const headerOffset = 100;
-        const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
-      }
-    }
-  };
+  }, [location.pathname, location.hash]);
 
   const productCatalog = [
     { name: '100% Spun Polyester', category: 'POLYESTER SEWING THREADS', description: 'High-quality spun polyester threads for excellent seam strength and reliable performance across industrial sewing applications.', packaging: 'Cone, King Tube, Spool' },
@@ -448,7 +438,7 @@ const Base = ({ children }) => {
             </Link>
           </div>
 
-          {/* Sustainability Menu Item with Dropdown */}
+          {/* Sustainability Menu Item with Dropdown - Link Style exactly like About */}
           <div 
             className="menu-item"
             onMouseEnter={() => handleMouseEnter('sustainability')}
@@ -459,18 +449,18 @@ const Base = ({ children }) => {
             </Link>
             {activeDropdown === 'sustainability' && (
               <div className="dropdown-menu">
-                <button 
-                  onClick={() => handleScrollToSection('environment-section')}
-                  className="dropdown-item-button"
+                <Link 
+                  to="/sustainability#environment-section"
+                  className="dropdown-item"
                 >
                   Environment
-                </button>
-                <button 
-                  onClick={() => handleScrollToSection('csr-section')}
-                  className="dropdown-item-button"
+                </Link>
+                <Link 
+                  to="/sustainability#csr-section"
+                  className="dropdown-item"
                 >
                   CSR
-                </button>
+                </Link>
               </div>
             )}
           </div>

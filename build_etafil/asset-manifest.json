@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/etafil/static/css/main.4050a4ed.css",
+    "main.js": "/etafil/static/js/main.94c280aa.js",
+    "static/js/239.78334abe.chunk.js": "/etafil/static/js/239.78334abe.chunk.js",
+    "static/js/977.2fd24133.chunk.js": "/etafil/static/js/977.2fd24133.chunk.js",
+    "static/js/455.58aeebe0.chunk.js": "/etafil/static/js/455.58aeebe0.chunk.js",
+    "static/js/453.0796f13d.chunk.js": "/etafil/static/js/453.0796f13d.chunk.js",
+    "index.html": "/etafil/index.html",
+    "main.4050a4ed.css.map": "/etafil/static/css/main.4050a4ed.css.map",
+    "main.94c280aa.js.map": "/etafil/static/js/main.94c280aa.js.map",
+    "239.78334abe.chunk.js.map": "/etafil/static/js/239.78334abe.chunk.js.map",
+    "977.2fd24133.chunk.js.map": "/etafil/static/js/977.2fd24133.chunk.js.map",
+    "455.58aeebe0.chunk.js.map": "/etafil/static/js/455.58aeebe0.chunk.js.map",
+    "453.0796f13d.chunk.js.map": "/etafil/static/js/453.0796f13d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4050a4ed.css",
+    "static/js/main.94c280aa.js"
+  ]
+}
